@@ -1,9 +1,14 @@
 
 .weather-app{
-    max-width: 600px;
+    
+    max-width: 900px;
     margin: 110px auto;
     padding: 10px;
-    border: 1px solid #889b96
+    border: 1px solid #889b96;
+    background: url("https://1.bp.blogspot.com/-Em6dqeATYeo/XkV8j-L3WMI/AAAAAAAAU6k/b0HAzEFV4JMomfn-dXsQF6JthRt0SovuQCLcBGAsYHQ/w914-h514-p-k-no-nu/colorful-minimalist-nature-landscape-scenery-uhdpaper.com-4K-6.421-wp.thumbnail.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .overview{
@@ -13,10 +18,23 @@
 {
     text-align: center;
 }
+.Temperatura strong
+{
+    font-size: 90px;
+}
 #temperatura-complemento
 {
+    font-size: 20px;
     text-align:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+#tiempo-atmosferico{
+    margin-left: 50px;
+    text-align: center;
+    color:#Fff
 }
 h1{
-    color: rgb(19, 247, 178)
+    color:#8A10D6;
 }
