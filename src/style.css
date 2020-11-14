@@ -1,3 +1,22 @@
+
+.weather-app{
+    max-width: 600px;
+    margin: 110px auto;
+    padding: 10px;
+    border: 1px solid #889b96
+}
+
+.overview{
+   text-align: center;
+}
+.float-none
+{
+    text-align: center;
+}
+#temperatura-complemento
+{
+    text-align:center;
+}
 h1{
     color: rgb(19, 247, 178)
 }
