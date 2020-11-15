@@ -64,3 +64,34 @@
 h1{
     color:#8A10D6;
 }
+
+.weather-forecast {
+    margin-top: 10px;
+  }
+  
+  .weather-forecast h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    height: 15px;
+    line-height: 15px;
+    padding-top: 7px;
+  }
+  
+  .weather-forecast img {
+    display: block;
+    margin: 0 auto;
+    height: 48px;
+    width: 48px;
+  }
+  
+  .weather-forecast-temperature {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    height: auto;
+    line-height: 15px;
+    white-space: nowrap;
+  }
