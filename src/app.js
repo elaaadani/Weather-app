@@ -1,10 +1,21 @@
 
 
 let currentTime = new Date();
+function horas(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
+  return `${hours}:${minutes}`;
+}
 function Hoy(date) {
-  let hora = currentTime.getHours();
-  let minutos = currentTime.getMinutes();
+  let minutos = horas(date);
   let days = [
     "Sunday",
     "Monday",
@@ -33,27 +44,13 @@ function Hoy(date) {
   let currentDay = days[date.getDay()];
   let currentMonth = months[date.getMonth()];
   let currentDate = date.getDate();
-  let DiaActual = document.querySelector("h3#dia-actual");
-  let HoraActual = document.querySelector("h3#hora-actual");
+  let DiaActual = document.querySelector("#dia-actual");
+  let HoraActual = document.querySelector("#hora-actual");
 
   DiaActual.innerHTML = ` ${currentDay} ${currentMonth} ${currentDate}`;
-  HoraActual.innerHTML=` ${hora}:${minutos}`;
+  HoraActual.innerHTML=minutos;
 }
 Hoy(currentTime);
-
-function horas(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  return `${hours}:${minutes}`;
-}
 
 function showTemperature(response)
 {
@@ -89,7 +86,6 @@ function handleSubmit(event) {
   buscar(cityInputElement.value);
 }
 
-
 function dispalyForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -100,7 +96,7 @@ function dispalyForecast(response) {
     forecastElement.innerHTML += `
     <div class="col-2">
       <h3>
-        ${horas(forecast.dt * 1000)}
+        ${horas(forecast.dt *1000)}
       </h3>
       <img
         src="http://openweathermap.org/img/wn/${

@@ -2,10 +2,12 @@
 .weather-app-container {
     max-width: 600px;
     margin: 30px auto;
+    font-family: monospace;
   }
 
 .weather-app{
     
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid #889b96;
@@ -48,7 +50,7 @@
 }
 #temperatura-complemento
 {
-    font-size: 20px;
+    font-size: 15px;
     
     text-align:center;
     margin-top: 20px;
@@ -94,4 +96,8 @@ h1{
     height: auto;
     line-height: 15px;
     white-space: nowrap;
+  }
+
+  #identificador{
+    font-size: 20px;
   }
