@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="src/style.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
    
     <title>Weather app </title>
 </head>
 <body>
-
+   
     
     <div class="container">
+        
         <div class="weather-app">
             <div class="overview">
                 <h1 id="city">
                     Melipilla
                 </h1>
                 <h3 id="dia-actual">
-                Sábado 14, 15:16
+                Sábado 14
+                </h3>
+                <h3 id="hora-actual">
+                    15:16
                 </h3>
         
             </div>
@@ -31,7 +36,7 @@
                         <span class="units">
                             <a href="#" id="celsius-link" class="active">°C</a> |
                             <a href="#" id="fahrenheit-link">°F</a></span>
-                            <h3>Cloudy</h3>
+                            <h3 id="description">Cloudy</h3>
                         </div>
                 </div>
             
@@ -41,8 +46,8 @@
             <div class="row" id="temperatura-complemento">
                 <div class="col-2"></div>
                 <div class="col-2"></div>                
-                <div class="col-2">Humidity: <br>39%</div>
-                <div class="col-2"> Wind: <br>4 km/h</div>
+                <div class="col-2" id="humidity">Humidity: <br>39%</div>
+                <div class="col-2" id="wind"> Wind: <br>4 km/h</div>
             </div>
             <div class="row tiempo-atmosferico" id="tiempo-atmosferico">
                 
