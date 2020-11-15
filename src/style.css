@@ -24,12 +24,14 @@
 }
 #temperatura-complemento
 {
-    font-size: 20px;
+    font-size: 25px;
+    
     text-align:center;
     margin-top: 20px;
     margin-bottom: 20px;
     
 }
+
 #tiempo-atmosferico{
     margin-left: 50px;
     text-align: center;
