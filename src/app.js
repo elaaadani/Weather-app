@@ -1,4 +1,5 @@
 
+
 let currentTime = new Date();
 
 function Hoy(date) {
@@ -44,17 +45,58 @@ function showTemperature(response)
 {
     console.log(response.data.main.temp);
     let temperatureElement =document.querySelector("#temperature");
-    let cityElement = document.querySelector("h1#city");
+    let cityElement = document.querySelector("#city");
     let descriptionEelement = document.querySelector("h3#description");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
-    cityElement.innerHTML=response.data.main.name;
-    temperatureElement.innerHTML= Math.round(response.data.main.temp);
+
+    celsiusTemperature = response.data.main.temp;
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    cityElement.innerHTML=response.data.name;
     descriptionEelement.innerHTML= response.data.weather[0].description;
     humidityElement.innerHTML=response.data.main.humidity;
     windElement.innerHTML=Math.round(response.data.wind.speed);
 }
-let apiKey = "921a29e043e83d24341a625517d5a318";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Santiago&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showTemperature);
+function buscar(city)
+{
+  let apiKey = "921a29e043e83d24341a625517d5a318";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+function handleSubmit(event) {
+  
+  event.preventDefault();
+  let cityInputElement=document.querySelector("#city-input");
+  buscar(cityInputElement.value);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+ 
+let form= document.querySelector("#search-form");
+form.addEventListener("submit",handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);

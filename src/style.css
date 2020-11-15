@@ -1,16 +1,40 @@
 
+.weather-app-container {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+
 .weather-app{
     
-    max-width: 900px;
-    margin: 110px auto;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 5px;
     border: 1px solid #889b96;
     background: url("https://1.bp.blogspot.com/-Em6dqeATYeo/XkV8j-L3WMI/AAAAAAAAU6k/b0HAzEFV4JMomfn-dXsQF6JthRt0SovuQCLcBGAsYHQ/w914-h514-p-k-no-nu/colorful-minimalist-nature-landscape-scenery-uhdpaper.com-4K-6.421-wp.thumbnail.jpg");
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+}
+#boton-buscar {
+  background: #FF6F91;
+  border-radius: 5px;
+  border: 1px solid #FF6F91;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  padding: 4px 10px 4px 10px;
+  margin: 0px 10px 0px 5px;
 }
 
+#city-input{
+    border: solid #FFA4BC;
+
+}
+
+#boton-buscar:hover {
+  background:#FFE3EB;
+  border: #FFE3EB;
+  color: #666296;
+}
 .overview{
    text-align: center;
 }
@@ -24,7 +48,7 @@
 }
 #temperatura-complemento
 {
-    font-size: 25px;
+    font-size: 20px;
     
     text-align:center;
     margin-top: 20px;

@@ -13,79 +13,101 @@
    
     
     <div class="container">
-        
-        <div class="weather-app">
-            <div class="overview">
-                <h1 id="city">
-                    Madrid
-                </h1>
-                <h3 id="dia-actual">
-                Sábado 14
-                </h3>
-                <h3 id="hora-actual">
-                    15:16
-                </h3>
-        
-            </div>
-            <div class="Temperatura">
-                
-                <div class="clearfix weather-temperature">
-                                
-                    <div class="float-none">
-                        <strong id="temperature">15</strong>
-                        <span class="units">
-                            <a href="#" id="celsius-link" class="active">°C</a> |
-                            <a href="#" id="fahrenheit-link">°F</a></span>
-                            <h3 id="description">Cloudy</h3>
-                        </div>
-                </div>
             
-                
+        <div class="weather-app-container">
+            <div class="weather-app">
+                <form id="search-form" class="mb-3">
+                    <div class="row">
+                    <div class="col-9">
+                        <input
+                        type="search"
+                        placeholder="Type a city.."
+                        class="form-control"
+                        id="city-input"
+                        autocomplete="off"
+                        />
+                    </div>
+                    <div class="col-3">
+                        <input
+                        type="submit"
+                        value="Search"
+                        class="btn btn-primary w-100"
+                        id="boton-buscar"
+                        />
+                    </div>
+                    </div>
+                </form>
+                <div class="overview">
+                    <h1 id="city">
+                        Madrid
+                    </h1>
+                    <h3 id="dia-actual">
+                    Sábado 14
+                    </h3>
+                    <h3 id="hora-actual">
+                        15:16
+                    </h3>
             
-            </div>
-            <div class="row" id="temperatura-complemento">
-                <div class="col-2"></div>
-                <div class="col-2"></div>
-                                
-                <div class="col-2" id="humidity-now">Humidity <br><span id="humidity"></span>%</div>
-                <div class="col-2" id="wind-now"> Wind <br><span id="wind"></span> km/h</div>
-            </div>
-            <div class="row tiempo-atmosferico" id="tiempo-atmosferico">
+                </div>
+                <div class="Temperatura">
+                    
+                    <div class="clearfix weather-temperature">
+                                    
+                        <div class="float-none">
+                            <strong id="temperature">15</strong>
+                            <span class="units">
+                                <a href="#" id="celsius-link" class="active">°C</a> |
+                                <a href="#" id="fahrenheit-link">°F</a></span>
+                                <h3 id="description">Cloudy</h3>
+                            </div>
+                    </div>
                 
-                <div class="col-2">
-                    <h3>
-                        18:00
-                    </h3>
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <h3>
-                        19:00
-                    </h3>
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <h3>
-                        20:00
-                    </h3>
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <h3>
-                        21:00
-                    </h3>
-                    <img src="" alt="">
-                </div>
-                <div class="col-2">
-                    <h3>
-                        22:00
-                    </h3>
-                    <img src="" alt="">
-                </div>
+                    
                 
+                </div>
+                <div class="row" id="temperatura-complemento">
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
+                                    
+                    <div class="col-2" id="humidity-now">Humidity <br><span id="humidity"></span>%</div>
+                    <div class="col-2" id="wind-now"> Wind <br><span id="wind"></span> km/h</div>
+                </div>
+                <div class="row tiempo-atmosferico" id="tiempo-atmosferico">
+                    
+                    <div class="col-2">
+                        <h3>
+                            18:00
+                        </h3>
+                        <img src="" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h3>
+                            19:00
+                        </h3>
+                        <img src="" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h3>
+                            20:00
+                        </h3>
+                        <img src="" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h3>
+                            21:00
+                        </h3>
+                        <img src="" alt="">
+                    </div>
+                    <div class="col-2">
+                        <h3>
+                            22:00
+                        </h3>
+                        <img src="" alt="">
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-        
+    </div>
           
          
         
